@@ -541,6 +541,9 @@ require('lazy').setup({
         -- clangd = {},
         gopls = {},
         terraformls = {},
+        templ = {},
+        tailwindcss = {},
+        htmx = {},
         -- pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -567,6 +570,8 @@ require('lazy').setup({
           },
         },
       }
+
+      vim.filetype.add { extension = { templ = 'templ' } }
 
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
