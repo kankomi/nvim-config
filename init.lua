@@ -256,6 +256,12 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
+    config = function()
+      require('gitsigns').setup()
+      vim.keymap.set('n', '<leader>gh', '<cmd>lua require"gitsigns".toggle_signs()<CR>', { desc = 'Toggle [G]it [H]ighlights' })
+      vim.keymap.set('n', '<leader>gj', '<cmd>lua require"gitsigns".next_hunk()<CR>', { desc = 'Jump to [N]ext [H]unk' })
+      vim.keymap.set('n', '<leader>gk', '<cmd>lua require"gitsigns".prev_hunk()<CR>', { desc = 'Jump to [P]revious [H]unk' })
+    end,
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
