@@ -10,3 +10,4 @@ vim.keymap.set('n', '<leader>fm', function()
   local bufnr = vim.api.nvim_get_current_buf()
   require('conform').format { bufnr = bufnr }
 end, { desc = 'Format current buffer' })
+vim.keymap.set('i', '<esc>', '<Plug>(copilot-dismiss)', { desc = 'Dismiss copilt suggestion' })
