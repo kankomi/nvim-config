@@ -6,3 +6,7 @@ vim.keymap.set('n', '<M-l>', '<cmd> bn<cr>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<M-h>', '<cmd> bp<cr>', { desc = 'Previous buffer' })
 vim.keymap.set('i', 'jj', '<esc>', { desc = 'Return to normal mode' })
 vim.keymap.set('n', '<C-s>', '<cmd> w<cr>', { desc = 'Save file' })
+vim.keymap.set('n', '<leader>fm', function()
+  local bufnr = vim.api.nvim_get_current_buf()
+  require('conform').format { bufnr = bufnr }
+end, { desc = 'Format current buffer' })
