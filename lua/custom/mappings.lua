@@ -1,6 +1,6 @@
 -- General
-vim.keymap.set('n', '<leader>rw', 'yiw:%s/<C-r>"//g<Left><Left>', { desc = 'Replace word' })
-vim.keymap.set('v', '<leader>rw', 'y:%s/<C-r>"//g<Left><Left>', { desc = 'Replace highlighted text' })
+vim.keymap.set('n', '<leader>rw', 'yiw:%s/<C-r>"//gc<Left><Left><Left>', { desc = 'Replace word' })
+vim.keymap.set('v', '<leader>rw', 'y:%s/<C-r>"//gc<Left><Left><Left>', { desc = 'Replace highlighted text' })
 vim.keymap.set('n', ';', ':', { desc = 'Open command line' })
 -- vim.keymap.set('n', '<M-l>', '<cmd> bn<cr>', { desc = 'Next buffer' })
 -- vim.keymap.set('n', '<M-h>', '<cmd> bp<cr>', { desc = 'Previous buffer' })
